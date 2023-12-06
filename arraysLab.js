@@ -6,7 +6,8 @@ const sampleArray = [2, 4, 6, 8, 10, 12, 1, 3, 5, 7];
 // "sampleArray". Then, log it to the console.
 // The expected output is 2.
 
-
+const firstItem = sampleArray[0];
+console.log(firstItem);
 
 
 //////////////////PROBLEM 2////////////////////
@@ -15,6 +16,8 @@ const sampleArray = [2, 4, 6, 8, 10, 12, 1, 3, 5, 7];
 // "sampleArray". Then, log it to the console.
 // The expected output is 10.
 
+const arrayLength = sampleArray.length;
+console.log(arrayLength);
 
 
 //////////////////PROBLEM 3////////////////////
@@ -25,6 +28,8 @@ const sampleArray = [2, 4, 6, 8, 10, 12, 1, 3, 5, 7];
 // sample array!
 // The expected output is 7.
 
+const lastItem = sampleArray[sampleArray.length - 1];
+console.log(lastItem);
 
 
 //////////////////PROBLEM 4////////////////////
@@ -34,6 +39,9 @@ const sampleArray = [2, 4, 6, 8, 10, 12, 1, 3, 5, 7];
 // The expected output is [2, 4, 6, 8, 10, 12, 1, 3, 5,  7, 42]
 
 
+sampleArray.push(42);
+console.log(sampleArray);
+
 //////////////////PROBLEM 5////////////////////
 
 // Write code to remove the last element from sampleArray 
@@ -42,12 +50,19 @@ const sampleArray = [2, 4, 6, 8, 10, 12, 1, 3, 5, 7];
 // The expected output is [2, 4, 6, 8, 10, 12, 1, 3, 5,  7]
 
 
+sampleArray.pop();
+console.log(sampleArray);
+
+
 //////////////////PROBLEM 6////////////////////
 
 // Replace the first and last item in sampleArray with the number 42, then
 // log it to the console.
 // The expected output is [42, 4, 6, 8, 10, 12, 1, 3, 5, 42]
 
+sampleArray[0] = 42;
+sampleArray[9] = 42;
+console.log(sampleArray);
 
 
 //////////////////PROBLEM 7////////////////////
@@ -62,6 +77,17 @@ const sampleArray = [2, 4, 6, 8, 10, 12, 1, 3, 5, 7];
 
 let num = 12;
 
+while (num <= 12) {
+
+    console.log(num);
+
+    if (num % 2 === 1) {
+        break;
+    }
+
+    num /= 2;
+}
+
 //////////////////PROBLEM 8////////////////////
 
 // Using a for...of loop, add ten to each element in startArray and then push 
@@ -72,19 +98,35 @@ let num = 12;
 const startArray = [1, 2, 3, 4];
 let newArray = [];
 
-
+for (const start of startArray) {
+    console.log(start);
+}
 
 //////////////////PROBLEM 9////////////////////
 
 // Fill the "numbers" array with numbers 0-31 using a for loop. Log the result.
 let numbers = [];
 
+for (let i = 0; i <= 31; i++) {
+    numbers.push(i);
+}
+
+console.log(numbers);
 
 //////////////////PROBLEM 10////////////////////
 
 // Fill the "evens" array with even numbers 0-20 using a for loop. Log the result.
+
 let evens = [];
 
+for (let i = 0; i <= 20; i++) {
+
+    if (i % 2 === 0) {
+        evens.push(i);
+    }
+}
+
+console.log(evens);
 
 //////////////////PROBLEM 11////////////////////
 
