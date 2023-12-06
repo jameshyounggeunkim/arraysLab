@@ -98,9 +98,13 @@ while (num <= 12) {
 const startArray = [1, 2, 3, 4];
 let newArray = [];
 
-for (const start of startArray) {
-    console.log(start);
+for (let start of startArray) {
+    start += 10;
+    newArray.push(start);
 }
+
+console.log(newArray);
+
 
 //////////////////PROBLEM 9////////////////////
 
@@ -135,6 +139,13 @@ console.log(evens);
 
 let countdown = [];
 
+for (let i = 10; i >= 1; i--) {
+
+    countdown.push(i);
+}
+
+console.log(countdown);
+
 
 //////////////////PROBLEM 12////////////////////
 
@@ -145,6 +156,13 @@ let countdown = [];
 const originalArray = [1, 2, 3, 4];
 const reversedArray = [];
 
+
+for (let i = 0; i < originalArray.length; i++) {
+    const reverses = originalArray[i];
+    reversedArray.unshift(reverses);
+}
+
+console.log(reversedArray);
 
 
 /// ///////////////PROBLEM 13////////////////////
@@ -160,6 +178,17 @@ const itemToRemove = 'banana';
 // Also try with itemToRemove = 'apricot' and make sure that nothing happens
 // to the grocery list
 
+if (groceryList.includes('banana') === true) {
+    groceryList.splice(1, 1);
+    console.log(groceryList);
+
+    if (groceryList.includes('apricot') === true) {
+        return groceryList;
+    }
+}
+
+
+
 
 //////////////////PROBLEM 14////////////////////
 
@@ -174,6 +203,8 @@ const itemToRemove = 'banana';
 
 let sum = 0;
 const repeats = [1, 1, 2, 5, 2, 6, 6];
+
+
 
 //////////////////PROBLEM 15////////////////////
 
